@@ -1,10 +1,12 @@
+import type { Config } from "tailwindcss";
+
 export default {
 	darkMode: ["class"],
 	content: [
-		"./pages/**/*.{js,jsx}",
-		"./components/**/*.{js,jsx}",
-		"./app/**/*.{js,jsx}",
-		"./src/**/*.{js,jsx}",
+		"./pages/**/*.{ts,tsx}",
+		"./components/**/*.{ts,tsx}",
+		"./app/**/*.{ts,tsx}",
+		"./src/**/*.{ts,tsx}",
 	],
 	prefix: "",
 	theme: {
@@ -24,8 +26,7 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))',
-					glow: 'hsl(var(--primary-glow))'
+					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -51,14 +52,6 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				success: {
-					DEFAULT: 'hsl(var(--success))',
-					foreground: 'hsl(var(--success-foreground))'
-				},
-				earth: 'hsl(var(--earth))',
-				water: 'hsl(var(--water))',
-				leaf: 'hsl(var(--leaf))',
-				energy: 'hsl(var(--energy))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -100,4 +93,4 @@ export default {
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
-};
+} satisfies Config;
